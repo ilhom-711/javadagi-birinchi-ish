@@ -53,3 +53,4 @@ private final SessionFactory sessionFactory;
         query.executeUpdate();
     }
 }
+// git uchun yozdim
