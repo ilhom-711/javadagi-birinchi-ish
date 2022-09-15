@@ -14,11 +14,14 @@ import java.util.List;
 @Repository
 public class EmployeeDAOImpl{
 
-@Autowired
-private SessionFactory sessionFactory;
+private final SessionFactory sessionFactory;
+
+    public EmployeeDAOImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
 
-        @Transactional
+    @Transactional
      public List<Employee> getAllEmployees() {
 
         Session session= sessionFactory.getCurrentSession();
